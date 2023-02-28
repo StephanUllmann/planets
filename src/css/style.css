@@ -1,0 +1,10 @@
+:root {
+  --color-primary: #070724;
+  --color-font-primary: #fff; }
+
+body {
+  font-family: "Antonio", sans-serif;
+  color: var(--color-font-primary); }
+
+body {
+  background-color: var(--color-primary); }

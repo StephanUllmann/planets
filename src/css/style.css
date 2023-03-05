@@ -1,10 +1,207 @@
 :root {
   --color-primary: #070724;
-  --color-font-primary: #fff; }
+  --color-font-primary: #fff;
+  --color-mercury: #419ebb;
+  --color-venus: #eda249;
+  --color-earth: #6d2ed5;
+  --color-mars: #d14c32;
+  --color-jupiter: #d83a34;
+  --color-saturn: #cd5120;
+  --color-uranus: #1ec1a2;
+  --color-neptune: #2d68f0; }
 
-body {
+.theme-mercury {
+  --color-theme: var(--color-mercury); }
+
+.theme-venus {
+  --color-theme: var(--color-venus); }
+
+.theme-earth {
+  --color-theme: var(--color-earth); }
+
+.theme-mars {
+  --color-theme: var(--color-mars); }
+
+.theme-jupiter {
+  --color-theme: var(--color-jupiter); }
+
+.theme-saturn {
+  --color-theme: var(--color-saturn); }
+
+.theme-uranus {
+  --color-theme: var(--color-uranus); }
+
+.theme-neptune {
+  --color-theme: var(--color-neptune); }
+
+html {
   font-family: "Antonio", sans-serif;
   color: var(--color-font-primary); }
 
+.heading-1 {
+  font-family: "Antonio", sans-serif;
+  font-size: 8rem;
+  text-transform: uppercase; }
+
+.heading-2 {
+  font-family: "Antonio", sans-serif;
+  font-size: 4rem;
+  letter-spacing: -10px;
+  text-transform: uppercase; }
+
+.heading-3 {
+  font-family: "League Spartan", sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: 2.6rem;
+  font-weight: 700;
+  text-transform: uppercase; }
+
+.heading-4 {
+  font-family: "League Spartan", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: uppercase; }
+
+.heading-logo {
+  font-family: "Antonio", sans-serif;
+  font-size: 2.8rem;
+  letter-spacing: -1px;
+  text-transform: uppercase; }
+
+.text-body {
+  font-family: "League Spartan", sans-serif;
+  font-weight: 400;
+  font-size: 1.4rem; }
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
 body {
-  background-color: var(--color-primary); }
+  background-color: var(--color-primary);
+  background-image: url(../../assets/background-stars.svg);
+  background-position: 50% 50%;
+  background-size: cover; }
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  position: relative; }
+  .nav__logo {
+    padding: 2rem 3rem; }
+  .nav__list {
+    list-style: none;
+    display: flex;
+    gap: 3rem;
+    padding: 0 4rem; }
+    .nav__list-item {
+      padding-top: 3.5rem;
+      position: relative;
+      overflow: hidden; }
+      .nav__list-item:hover .nav__list-link--mercury::before {
+        transform: translateX(0%); }
+      .nav__list-item:hover .nav__list-link--venus::before {
+        transform: translateX(0%); }
+      .nav__list-item:hover .nav__list-link--earth::before {
+        transform: translateX(0%); }
+      .nav__list-item:hover .nav__list-link--mars::before {
+        transform: translateX(0%); }
+      .nav__list-item:hover .nav__list-link--jupiter::before {
+        transform: translateX(0%); }
+      .nav__list-item:hover .nav__list-link--saturn::before {
+        transform: translateX(0%); }
+      .nav__list-item:hover .nav__list-link--uranus::before {
+        transform: translateX(0%); }
+      .nav__list-item:hover .nav__list-link--neptune::before {
+        transform: translateX(0%); }
+    .nav__list-link {
+      color: rgba(255, 255, 255, 0.75);
+      text-decoration: none;
+      letter-spacing: 1px; }
+      .nav__list-link--mercury::before {
+        content: "";
+        height: 2px;
+        width: 100%;
+        position: absolute;
+        background-color: var(--color-mercury);
+        top: 0;
+        transform: translateX(-100%);
+        transition: transform 0.4s cubic-bezier(0.82, 0.03, 0.12, 1.1); }
+      .nav__list-link--venus::before {
+        content: "";
+        height: 2px;
+        width: 100%;
+        position: absolute;
+        background-color: var(--color-venus);
+        top: 0;
+        transform: translateX(-100%);
+        transition: transform 0.4s cubic-bezier(0.82, 0.03, 0.12, 1.1); }
+      .nav__list-link--earth::before {
+        content: "";
+        height: 2px;
+        width: 100%;
+        position: absolute;
+        background-color: var(--color-earth);
+        top: 0;
+        transform: translateX(-100%);
+        transition: transform 0.4s cubic-bezier(0.82, 0.03, 0.12, 1.1); }
+      .nav__list-link--mars::before {
+        content: "";
+        height: 2px;
+        width: 100%;
+        position: absolute;
+        background-color: var(--color-mars);
+        top: 0;
+        transform: translateX(-100%);
+        transition: transform 0.4s cubic-bezier(0.82, 0.03, 0.12, 1.1); }
+      .nav__list-link--jupiter::before {
+        content: "";
+        height: 2px;
+        width: 100%;
+        position: absolute;
+        background-color: var(--color-jupiter);
+        top: 0;
+        transform: translateX(-100%);
+        transition: transform 0.4s cubic-bezier(0.82, 0.03, 0.12, 1.1); }
+      .nav__list-link--saturn::before {
+        content: "";
+        height: 2px;
+        width: 100%;
+        position: absolute;
+        background-color: var(--color-saturn);
+        top: 0;
+        transform: translateX(-100%);
+        transition: transform 0.4s cubic-bezier(0.82, 0.03, 0.12, 1.1); }
+      .nav__list-link--uranus::before {
+        content: "";
+        height: 2px;
+        width: 100%;
+        position: absolute;
+        background-color: var(--color-uranus);
+        top: 0;
+        transform: translateX(-100%);
+        transition: transform 0.4s cubic-bezier(0.82, 0.03, 0.12, 1.1); }
+      .nav__list-link--neptune::before {
+        content: "";
+        height: 2px;
+        width: 100%;
+        position: absolute;
+        background-color: var(--color-neptune);
+        top: 0;
+        transform: translateX(-100%);
+        transition: transform 0.4s cubic-bezier(0.82, 0.03, 0.12, 1.1); }
+  .nav::after {
+    content: "";
+    height: 1px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.5); }

@@ -2,12 +2,16 @@
   "name": "planets-fact-site",
   "version": "1.0.0",
   "description": "Challenge from frontendmentor.io",
-  "main": "index.js",
+  "source": [
+    "index.html",
+    "src/scss/main.scss",
+    "src/ts/controller.ts"
+  ],
   "scripts": {
     "watch:sass": "node-sass ./src/scss/main.scss ./src/css/style.css -w",
     "watch:ts": "tsc -w",
     "devserver": "live-server",
-    "start": "npm-run-all --parallel watch:sass watch:ts devserver"
+    "start": "parcel ./index.html"
   },
   "author": "",
   "license": "ISC",

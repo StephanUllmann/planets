@@ -8,4 +8,40 @@ $font-secondary: "League Spartan", sans-serif;
 :root {
   --color-primary: #070724;
   --color-font-primary: #fff;
+
+  --color-mercury: #419ebb;
+  --color-venus: #eda249;
+  --color-earth: #6d2ed5;
+  --color-mars: #d14c32;
+  --color-jupiter: #d83a34;
+  --color-saturn: #cd5120;
+  --color-uranus: #1ec1a2;
+  --color-neptune: #2d68f0;
+}
+
+.theme {
+  &-mercury {
+    --color-theme: var(--color-mercury);
+  }
+  &-venus {
+    --color-theme: var(--color-venus);
+  }
+  &-earth {
+    --color-theme: var(--color-earth);
+  }
+  &-mars {
+    --color-theme: var(--color-mars);
+  }
+  &-jupiter {
+    --color-theme: var(--color-jupiter);
+  }
+  &-saturn {
+    --color-theme: var(--color-saturn);
+  }
+  &-uranus {
+    --color-theme: var(--color-uranus);
+  }
+  &-neptune {
+    --color-theme: var(--color-neptune);
+  }
 }

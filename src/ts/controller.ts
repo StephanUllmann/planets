@@ -1,4 +1,4 @@
-import { getPlanet } from "./model.js";
+import { getPlanet } from "./model";
 
 // console.log(model.fetchData("../src/data.json"));
 
@@ -15,10 +15,10 @@ import { getPlanet } from "./model.js";
 // }
 
 const getPlanetData = async function (planetName: string) {
-  const planet = await getPlanet("../src/data.json", planetName);
+  const planet = await getPlanet("../data.json", planetName);
   console.log(planet);
 };
 
 getPlanetData("Earth");
 
-console.log("puh");
+console.log("whatever");

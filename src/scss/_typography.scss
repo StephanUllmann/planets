@@ -1,4 +1,44 @@
-body {
+html {
   font-family: $font-primary;
   color: var(--color-font-primary);
+}
+
+.heading {
+  &-1 {
+    font-family: $font-primary;
+    font-size: 8rem;
+    text-transform: uppercase;
+  }
+  &-2 {
+    font-family: $font-primary;
+    font-size: 4rem;
+    letter-spacing: -10px;
+    text-transform: uppercase;
+  }
+  &-3 {
+    font-family: $font-secondary;
+    font-size: 1.2rem;
+    letter-spacing: 2.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  &-4 {
+    font-family: $font-secondary;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  &-logo {
+    font-family: $font-primary;
+    font-size: 2.8rem;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+  }
+}
+
+.text-body {
+  font-family: $font-secondary;
+  font-weight: 400;
+  font-size: 1.4rem;
 }

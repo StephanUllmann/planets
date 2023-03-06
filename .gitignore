@@ -15,6 +15,7 @@
 .DS_Store
 .prettierignore
 
+.parcel-cache/
 starter-code/
 node_modules/
 

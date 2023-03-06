@@ -1,0 +1,36 @@
+.planets {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  padding-right: 12.5rem;
+  align-items: center;
+
+  &__pic {
+    grid-column: 1 / 2;
+    grid-row: 1 / -1;
+    justify-self: center;
+    align-self: center;
+  }
+
+  &__text {
+    &-heading {
+      grid-row: 1 / 2;
+    }
+
+    &-body {
+      grid-row: 2 / 3;
+    }
+
+    &-source {
+      grid-row: 3 / 4;
+    }
+
+    &-link {
+    }
+  }
+
+  &__icon {
+    width: 1.2rem;
+    height: 1.2rem;
+    display: inline-block;
+  }
+}

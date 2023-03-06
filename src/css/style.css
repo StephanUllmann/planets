@@ -52,7 +52,7 @@ html {
 .heading-3 {
   font-family: "League Spartan", sans-serif;
   font-size: 1.2rem;
-  letter-spacing: 2.6rem;
+  letter-spacing: 2px;
   font-weight: 700;
   text-transform: uppercase; }
 
@@ -93,7 +93,6 @@ body {
 .nav {
   display: flex;
   justify-content: space-between;
-  align-items: start;
   position: relative; }
   .nav__logo {
     padding: 2rem 3rem; }
@@ -103,7 +102,6 @@ body {
     gap: 3rem;
     padding: 0 4rem; }
     .nav__list-item {
-      padding-top: 3.5rem;
       position: relative;
       overflow: hidden; }
       .nav__list-item:hover .nav__list-link--mercury::before {
@@ -123,12 +121,14 @@ body {
       .nav__list-item:hover .nav__list-link--neptune::before {
         transform: translateX(0%); }
     .nav__list-link {
+      display: block;
       color: rgba(255, 255, 255, 0.75);
       text-decoration: none;
-      letter-spacing: 1px; }
+      letter-spacing: 1px;
+      padding: 3.25rem 0; }
       .nav__list-link--mercury::before {
         content: "";
-        height: 2px;
+        height: 3px;
         width: 100%;
         position: absolute;
         background-color: var(--color-mercury);
@@ -137,7 +137,7 @@ body {
         transition: transform 0.4s cubic-bezier(0.82, 0.03, 0.12, 1.1); }
       .nav__list-link--venus::before {
         content: "";
-        height: 2px;
+        height: 3px;
         width: 100%;
         position: absolute;
         background-color: var(--color-venus);
@@ -146,7 +146,7 @@ body {
         transition: transform 0.4s cubic-bezier(0.82, 0.03, 0.12, 1.1); }
       .nav__list-link--earth::before {
         content: "";
-        height: 2px;
+        height: 3px;
         width: 100%;
         position: absolute;
         background-color: var(--color-earth);
@@ -155,7 +155,7 @@ body {
         transition: transform 0.4s cubic-bezier(0.82, 0.03, 0.12, 1.1); }
       .nav__list-link--mars::before {
         content: "";
-        height: 2px;
+        height: 3px;
         width: 100%;
         position: absolute;
         background-color: var(--color-mars);
@@ -164,7 +164,7 @@ body {
         transition: transform 0.4s cubic-bezier(0.82, 0.03, 0.12, 1.1); }
       .nav__list-link--jupiter::before {
         content: "";
-        height: 2px;
+        height: 3px;
         width: 100%;
         position: absolute;
         background-color: var(--color-jupiter);
@@ -173,7 +173,7 @@ body {
         transition: transform 0.4s cubic-bezier(0.82, 0.03, 0.12, 1.1); }
       .nav__list-link--saturn::before {
         content: "";
-        height: 2px;
+        height: 3px;
         width: 100%;
         position: absolute;
         background-color: var(--color-saturn);
@@ -182,7 +182,7 @@ body {
         transition: transform 0.4s cubic-bezier(0.82, 0.03, 0.12, 1.1); }
       .nav__list-link--uranus::before {
         content: "";
-        height: 2px;
+        height: 3px;
         width: 100%;
         position: absolute;
         background-color: var(--color-uranus);
@@ -191,7 +191,7 @@ body {
         transition: transform 0.4s cubic-bezier(0.82, 0.03, 0.12, 1.1); }
       .nav__list-link--neptune::before {
         content: "";
-        height: 2px;
+        height: 3px;
         width: 100%;
         position: absolute;
         background-color: var(--color-neptune);
@@ -205,3 +205,24 @@ body {
     position: absolute;
     bottom: 0;
     background-color: rgba(255, 255, 255, 0.5); }
+
+.planets {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  padding-right: 12.5rem;
+  align-items: center; }
+  .planets__pic {
+    grid-column: 1 / 2;
+    grid-row: 1 / -1;
+    justify-self: center;
+    align-self: center; }
+  .planets__text-heading {
+    grid-row: 1 / 2; }
+  .planets__text-body {
+    grid-row: 2 / 3; }
+  .planets__text-source {
+    grid-row: 3 / 4; }
+  .planets__icon {
+    width: 1.2rem;
+    height: 1.2rem;
+    display: inline-block; }

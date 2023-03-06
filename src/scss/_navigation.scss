@@ -1,6 +1,6 @@
 @mixin linkbefore-el($color) {
   content: "";
-  height: 2px;
+  height: 3px;
   width: 100%;
   position: absolute;
   background-color: $color;
@@ -12,7 +12,7 @@
 .nav {
   display: flex;
   justify-content: space-between;
-  align-items: start;
+  // align-items: start;
   position: relative;
 
   &__logo {
@@ -26,9 +26,9 @@
     padding: 0 4rem;
 
     &-item {
-      padding-top: 3.5rem;
       position: relative;
       overflow: hidden;
+      // align-self: stretch;
 
       &:hover {
         .nav__list-link--mercury::before {
@@ -59,9 +59,11 @@
     }
 
     &-link {
+      display: block;
       color: rgba(#fff, 0.75);
       text-decoration: none;
       letter-spacing: 1px;
+      padding: 3.25rem 0;
 
       &--mercury::before {
         @include linkbefore-el(var(--color-mercury));

@@ -8,12 +8,22 @@ html {
     font-family: $font-primary;
     font-size: 8rem;
     text-transform: uppercase;
+    font-weight: 400;
+    @media only screen and (max-width: $bp-large) {
+      font-size: 6rem;
+    }
   }
   &-2 {
     font-family: $font-primary;
     font-size: 4rem;
-    letter-spacing: -10px;
+    letter-spacing: -1px;
     text-transform: uppercase;
+    @media only screen and (max-width: $bp-larger) {
+      font-size: 3rem;
+    }
+    @media only screen and (max-width: $bp-large) {
+      font-size: 2rem;
+    }
   }
   &-3 {
     font-family: $font-secondary;
@@ -25,8 +35,15 @@ html {
   &-4 {
     font-family: $font-secondary;
     font-size: 1.1rem;
-    font-weight: 700;
+    letter-spacing: 1px;
+    font-weight: 400;
     text-transform: uppercase;
+    @media only screen and (max-width: $bp-larger) {
+      font-size: 1.4rem;
+    }
+    @media only screen and (max-width: $bp-large) {
+      font-size: 1rem;
+    }
   }
 
   &-logo {
@@ -34,6 +51,12 @@ html {
     font-size: 2.8rem;
     letter-spacing: -1px;
     text-transform: uppercase;
+    @media only screen and (max-width: $bp-larger) {
+      font-size: 2rem;
+    }
+    @media only screen and (max-width: $bp-large) {
+      font-size: 2.3rem;
+    }
   }
 }
 

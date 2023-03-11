@@ -8,6 +8,7 @@ $font-secondary: "League Spartan", sans-serif;
 :root {
   --color-primary: #070724;
   --color-font-primary: #fff;
+  --color-font-sec: rgba(#fff, 0.5);
 
   --color-mercury: #419ebb;
   --color-venus: #eda249;
@@ -17,6 +18,11 @@ $font-secondary: "League Spartan", sans-serif;
   --color-saturn: #cd5120;
   --color-uranus: #1ec1a2;
   --color-neptune: #2d68f0;
+
+  --color-btn: #070724;
+  --color-btn-hover: #d8d8d8;
+  --color-btn-active: var(--color-theme);
+  --color-border: #393950;
 }
 
 .theme {
@@ -45,3 +51,8 @@ $font-secondary: "League Spartan", sans-serif;
     --color-theme: var(--color-neptune);
   }
 }
+
+// Breakponits
+
+$bp-larger: 70em;
+$bp-large: 60em;

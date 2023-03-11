@@ -1,30 +1,66 @@
 .planets {
   display: grid;
-  grid-template-columns: 2fr 1fr;
-  padding-right: 12.5rem;
+  // grid-template-columns: 2fr 1fr;
+  grid-template-columns: 1fr [content-start] 50% [planet-end text-start] 25% [content-end] 1fr;
+  grid-template-rows: repeat(6, max-content) 1fr;
+  align-content: center;
+  // padding-right: 12.5rem;
+  padding-top: 8rem;
   align-items: center;
+  row-gap: 2.3rem;
+
+  @media only screen and (max-width: $bp-large) {
+    grid-template-columns: 1fr [content-start] 40% [middle] 10% [text-start] 35% [content-end] 1fr;
+    justify-content: space-between;
+    row-gap: 1rem;
+    // padding-top: 2rem;
+    // padding-left: 1rem;
+    // padding-right: 1rem;
+  }
 
   &__pic {
-    grid-column: 1 / 2;
-    grid-row: 1 / -1;
+    height: 66%;
+    grid-column: 1 / planet-end;
+    grid-row: 1 / 6;
     justify-self: center;
     align-self: center;
+    @media only screen and (max-width: $bp-large) {
+      grid-row: 1 / 2;
+    }
   }
 
   &__text {
     &-heading {
       grid-row: 1 / 2;
+      grid-column: text-start / content-end;
+      @media only screen and (max-width: $bp-large) {
+        grid-row: 2 / 3;
+        grid-column: content-start / middle;
+      }
     }
 
     &-body {
       grid-row: 2 / 3;
+      grid-column: text-start / content-end;
+      @media only screen and (max-width: $bp-large) {
+        grid-row: 3 / 4;
+        grid-column: content-start / middle;
+      }
     }
 
     &-source {
       grid-row: 3 / 4;
+      grid-column: text-start / content-end;
+      color: rgba(#fff, 0.5);
+      @media only screen and (max-width: $bp-large) {
+        grid-row: 4 / 5;
+        grid-column: content-start / middle;
+      }
     }
 
     &-link {
+      color: inherit;
+      font-weight: 700;
     }
   }
 
@@ -32,5 +68,46 @@
     width: 1.2rem;
     height: 1.2rem;
     display: inline-block;
+    transform: translateY(2px);
+    margin-left: 0.8rem;
+  }
+
+  &__buttons {
+    grid-row: 5 / 6;
+    grid-column: text-start / content-end;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    @media only screen and (max-width: $bp-large) {
+      grid-row: 3 / 5;
+      margin-left: 1rem;
+      transform: translateY(-1rem);
+    }
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: var(--color-btn);
+    color: var(--color-font-primary);
+    border: 1px solid var(--color-border);
+    cursor: pointer;
+
+    &-num {
+      padding: 1.2rem 2.8rem;
+      display: block;
+    }
+    &:hover {
+      background-color: var(--color-btn-hover);
+    }
+
+    &--active {
+      background-color: var(--color-theme);
+      &:hover {
+        background-color: var(--color-theme);
+      }
+    }
   }
 }

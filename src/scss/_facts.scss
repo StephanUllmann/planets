@@ -1,0 +1,24 @@
+.facts {
+  grid-row: 7 / 8;
+  grid-column: content-start / content-end;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+
+  @media only screen and (max-width: $bp-large) {
+    grid-row: 5 / 6;
+  }
+
+  &__card {
+    width: 22.5rem;
+    // height: 7.5rem;
+    padding: 2rem;
+
+    border: 1px solid var(--color-border);
+  }
+
+  &__heading {
+    color: rgba(#fff, 0.5);
+    padding-bottom: 1rem;
+  }
+}
